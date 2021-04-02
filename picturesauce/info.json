@@ -3,5 +3,7 @@
     "install_msg" : "Thanks for checking out my cogs!\nFor more information on my cogs go to my github here: <https://github.com/XangeMusic/Xangel-Cogs>",
     "name" : "PictureSauce",
     "short" : "PictureSauce by XangelMusic",
-    "description" : ""
+    "description" : "",
+    "hidden" : false,
+    "disabled" : false
 }
