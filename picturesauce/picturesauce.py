@@ -47,7 +47,7 @@ class PictureSauce(commands.Cog):
 
     @commands.group()
     @commands.guild_only()
-    async def sauce(self, ctx: commands.Context) -> None:
+    async def sauce(self, ctx: commands.Context):
         """This does stuff!"""
         # Your code will go here
         await ctx.send("This command is: sauce")
