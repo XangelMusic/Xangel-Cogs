@@ -10,13 +10,13 @@ from redbot.core import Config, VersionInfo, checks, commands, modlog, version_i
 from redbot.core.commands import TimedeltaConverter
 from redbot.core.i18n import Translator, cog_i18n
 
+
 @cog_i18n(_)
 class PictureSauce(commands.Cog):
-        """
-    Trigger bot events using regular expressions
+    """
+    PictureSauce bot events using SauceNAO
     See https://regex101.com/ for help building a regex pattern.
         See `[p]retrigger explain` or click the link below for more details.
-        [For more details click here.](https://github.com/TrustyJAID/Trusty-cogs/blob/master/retrigger/README.md)
     """
 
     __author__ = ["XangelMusic"]
@@ -45,66 +45,65 @@ class PictureSauce(commands.Cog):
         self.trigger_timeout = 1
         self.save_loop.start()
 
-
     @commands.group()
     @commands.guild_only()
     async def sauce(self, ctx: commands.Context) -> None:
         """This does stuff!"""
         # Your code will go here
-        await ctx.send("I can do stuff!")
+        await ctx.send("This command is: sauce")
 
     @checks.is_owner()
     @sauce.command()
     async def enable(self, ctx: commands.Context) -> None:
         """This does stuff!"""
         # Your code will go here
-        await ctx.send("Enable!")
+        await ctx.send("This command is: sauce enable")
 
     @checks.is_owner()
     @sauce.command()
     async def disable(self, ctx: commands.Context) -> None:
         """This does stuff!"""
         # Your code will go here
-        await ctx.send("Enable!")
+        await ctx.send("This command is: sauce disable")
 
     @checks.is_owner()
     @sauce.command()
     async def set(self, ctx: commands.Context) -> None:
         """This does stuff!"""
         # Your code will go here
-        await ctx.send("Enable!")
+        await ctx.send("This command is: sauce set")
 
     @checks.is_owner()
     @sauce.command()
     async def block(self, ctx: commands.Context) -> None:
         """This does stuff!"""
         # Your code will go here
-        await ctx.send("Enable!")
+        await ctx.send("This command is: sauce block")
 
     @checks.is_owner()
     @sauce.command()
     async def unset(self, ctx: commands.Context) -> None:
         """This does stuff!"""
         # Your code will go here
-        await ctx.send("Enable!")
+        await ctx.send("This command is: sauce unset")
 
     @checks.is_owner()
     @sauce.command()
     async def reset(self, ctx: commands.Context) -> None:
         """This does stuff!"""
         # Your code will go here
-        await ctx.send("Enable!")
+        await ctx.send("This command is: sauce reset")
 
     @checks.is_owner()
     @set.command()
     async def all(self, ctx: commands.Context) -> None:
         """This does stuff!"""
         # Your code will go here
-        await ctx.send("Enable!")
+        await ctx.send("This command is: sauce set all")
 
     @checks.is_owner()
     @unset.command()
     async def all(self, ctx: commands.Context) -> None:
         """This does stuff!"""
         # Your code will go here
-        await ctx.send("Enable!")
+        await ctx.send("This command is: sauce unset all")
