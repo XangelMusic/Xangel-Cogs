@@ -11,7 +11,6 @@ from redbot.core.commands import TimedeltaConverter
 from redbot.core.i18n import Translator, cog_i18n
 
 
-@cog_i18n(_)
 class PictureSauce(commands.Cog):
     """
     PictureSauce bot events using SauceNAO
@@ -24,26 +23,26 @@ class PictureSauce(commands.Cog):
 
     def __init__(self, bot):
         self.bot = bot
-        self.config = Config.get_conf(self, 964565433247, force_registration=True)
-        default_guild = {
-            "trigger_list": {},
-            "allow_multiple": False,
-            "modlog": "default",
-            "ban_logs": False,
-            "kick_logs": False,
-            "add_role_logs": False,
-            "remove_role_logs": False,
-            "filter_logs": False,
-            "bypass": False,
-        }
+        # self.config = Config.get_conf(self, 964565433247, force_registration=True)
+        # default_guild = {
+        #     "trigger_list": {},
+        #     "allow_multiple": False,
+        #     "modlog": "default",
+        #     "ban_logs": False,
+        #     "kick_logs": False,
+        #     "add_role_logs": False,
+        #     "remove_role_logs": False,
+        #     "filter_logs": False,
+        #     "bypass": False,
+        # }
 
-        self.config.register_guild(**default_guild)
-        self.config.register_global(trigger_timeout=1)
-        self.re_pool = Pool()
-        self.triggers = {}
-        self.__unload = self.cog_unload
-        self.trigger_timeout = 1
-        self.save_loop.start()
+        # self.config.register_guild(**default_guild)
+        # self.config.register_global(trigger_timeout=1)
+        # self.re_pool = Pool()
+        # self.triggers = {}
+        # self.__unload = self.cog_unload
+        # self.trigger_timeout = 1
+        # self.save_loop.start()
 
     @commands.group()
     @commands.guild_only()
