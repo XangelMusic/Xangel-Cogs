@@ -18,8 +18,8 @@ class PictureSauce(commands.Cog):
         See `[p]retrigger explain` or click the link below for more details.
     """
 
-    __author__ = ["XangelMusic"]
-    __version__ = "0.1.0"
+    # __author__ = ["XangelMusic"]
+    # __version__ = "0.1.0"
 
     def __init__(self, bot):
         self.bot = bot
@@ -44,65 +44,65 @@ class PictureSauce(commands.Cog):
         # self.trigger_timeout = 1
         # self.save_loop.start()
 
-    @commands.group()
-    @commands.guild_only()
+    # @commands.group()
+    @commands.command()
     async def sauce(self, ctx: commands.Context):
         """This does stuff!"""
         # Your code will go here
         await ctx.send("This command is: sauce")
 
-    @checks.is_owner()
-    @sauce.command()
-    async def enable(self, ctx: commands.Context) -> None:
-        """This does stuff!"""
-        # Your code will go here
-        await ctx.send("This command is: sauce enable")
-
-    @checks.is_owner()
-    @sauce.command()
-    async def disable(self, ctx: commands.Context) -> None:
-        """This does stuff!"""
-        # Your code will go here
-        await ctx.send("This command is: sauce disable")
-
-    @checks.is_owner()
-    @sauce.command()
-    async def set(self, ctx: commands.Context) -> None:
-        """This does stuff!"""
-        # Your code will go here
-        await ctx.send("This command is: sauce set")
-
-    @checks.is_owner()
-    @sauce.command()
-    async def block(self, ctx: commands.Context) -> None:
-        """This does stuff!"""
-        # Your code will go here
-        await ctx.send("This command is: sauce block")
-
-    @checks.is_owner()
-    @sauce.command()
-    async def unset(self, ctx: commands.Context) -> None:
-        """This does stuff!"""
-        # Your code will go here
-        await ctx.send("This command is: sauce unset")
-
-    @checks.is_owner()
-    @sauce.command()
-    async def reset(self, ctx: commands.Context) -> None:
-        """This does stuff!"""
-        # Your code will go here
-        await ctx.send("This command is: sauce reset")
-
-    @checks.is_owner()
-    @set.command()
-    async def all(self, ctx: commands.Context) -> None:
-        """This does stuff!"""
-        # Your code will go here
-        await ctx.send("This command is: sauce set all")
-
-    @checks.is_owner()
-    @unset.command()
-    async def all(self, ctx: commands.Context) -> None:
-        """This does stuff!"""
-        # Your code will go here
-        await ctx.send("This command is: sauce unset all")
+    # @checks.is_owner()
+    # @sauce.command()
+    # async def enable(self, ctx: commands.Context) -> None:
+    #     """This does stuff!"""
+    #     # Your code will go here
+    #     await ctx.send("This command is: sauce enable")
+    #
+    # @checks.is_owner()
+    # @sauce.command()
+    # async def disable(self, ctx: commands.Context) -> None:
+    #     """This does stuff!"""
+    #     # Your code will go here
+    #     await ctx.send("This command is: sauce disable")
+    #
+    # @checks.is_owner()
+    # @sauce.command()
+    # async def set(self, ctx: commands.Context) -> None:
+    #     """This does stuff!"""
+    #     # Your code will go here
+    #     await ctx.send("This command is: sauce set")
+    #
+    # @checks.is_owner()
+    # @sauce.command()
+    # async def block(self, ctx: commands.Context) -> None:
+    #     """This does stuff!"""
+    #     # Your code will go here
+    #     await ctx.send("This command is: sauce block")
+    #
+    # @checks.is_owner()
+    # @sauce.command()
+    # async def unset(self, ctx: commands.Context) -> None:
+    #     """This does stuff!"""
+    #     # Your code will go here
+    #     await ctx.send("This command is: sauce unset")
+    #
+    # @checks.is_owner()
+    # @sauce.command()
+    # async def reset(self, ctx: commands.Context) -> None:
+    #     """This does stuff!"""
+    #     # Your code will go here
+    #     await ctx.send("This command is: sauce reset")
+    #
+    # @checks.is_owner()
+    # @set.command()
+    # async def all(self, ctx: commands.Context) -> None:
+    #     """This does stuff!"""
+    #     # Your code will go here
+    #     await ctx.send("This command is: sauce set all")
+    #
+    # @checks.is_owner()
+    # @unset.command()
+    # async def all(self, ctx: commands.Context) -> None:
+    #     """This does stuff!"""
+    #     # Your code will go here
+    #     await ctx.send("This command is: sauce unset all")
