@@ -52,12 +52,12 @@ class PictureSauce(commands.Cog):
         await ctx.send("This command is: sauce")
 
     # @checks.is_owner()
-    # @sauce.command()
-    # async def enable(self, ctx: commands.Context) -> None:
-    #     """This does stuff!"""
-    #     # Your code will go here
-    #     await ctx.send("This command is: sauce enable")
-    #
+    @sauce.command()
+    async def enable(self, ctx: commands.Context) -> None:
+        """This does stuff!"""
+        # Your code will go here
+        await ctx.send("This command is: sauce enable")
+
     # @checks.is_owner()
     # @sauce.command()
     # async def disable(self, ctx: commands.Context) -> None:
@@ -95,14 +95,14 @@ class PictureSauce(commands.Cog):
     #
     # @checks.is_owner()
     # @set.command()
-    # async def all(self, ctx: commands.Context) -> None:
+    # async def set_all(self, ctx: commands.Context) -> None:
     #     """This does stuff!"""
     #     # Your code will go here
     #     await ctx.send("This command is: sauce set all")
     #
     # @checks.is_owner()
     # @unset.command()
-    # async def all(self, ctx: commands.Context) -> None:
+    # async def unset_all(self, ctx: commands.Context) -> None:
     #     """This does stuff!"""
     #     # Your code will go here
     #     await ctx.send("This command is: sauce unset all")
