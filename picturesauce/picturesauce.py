@@ -46,14 +46,14 @@ class PictureSauce(commands.Cog):
 
     # @commands.group()
     @commands.command()
-    async def sauce(self, ctx: commands.Context):
+    async def sauce(self, ctx: commands.Context) -> None:
         """This does stuff!"""
         # Your code will go here
         await ctx.send("This command is: sauce")
 
     # @checks.is_owner()
     @sauce.command()
-    async def enable(self, ctx: commands.Context) -> None:
+    async def enable(self, ctx: commands.Context):
         """This does stuff!"""
         # Your code will go here
         await ctx.send("This command is: sauce enable")
