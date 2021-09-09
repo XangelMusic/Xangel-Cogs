@@ -51,7 +51,7 @@ class PictureSauce(commands.Cog):
         pass
 
     # @checks.is_owner()
-    @pic_sauce.command(name="enable")
+    @pic_sauce.command()
     async def enable(self, ctx: commands.Context):
         """This does stuff!"""
         # Your code will go here
