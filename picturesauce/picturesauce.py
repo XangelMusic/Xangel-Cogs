@@ -44,14 +44,14 @@ class PictureSauce(commands.Cog):
         # self.trigger_timeout = 1
         # self.save_loop.start()
 
-    @commands.group(name="sauce")
-    async def pic_sauce(self, ctx: commands.Context) -> None:
+    @commands.group()
+    async def sauce(self, ctx: commands.Context) -> None:
         """This does stuff!"""
         # Your code will go here
         pass
 
     # @checks.is_owner()
-    @pic_sauce.command()
+    @sauce.command()
     async def enable(self, ctx: commands.Context):
         """This does stuff!"""
         # Your code will go here
