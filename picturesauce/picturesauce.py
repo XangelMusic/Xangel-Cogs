@@ -58,9 +58,6 @@ class PictureSauce(SauceHandler, commands.Cog):
         self.trigger_timeout = 1
         self.save_loop.start()
 
-
-
-
     @commands.command()
     async def saucenao(self, ctx, user: str):
         saucenao_keys = await self.bot.get_shared_api_tokens("saucenao")
@@ -113,18 +110,10 @@ class PictureSauce(SauceHandler, commands.Cog):
         guild = ctx.guild
         author = ctx.message.author.id
 
-        delete_after_seconds = None
-        if delete_after:
-            if delete_after.total_seconds() > 0:
-                delete_after_seconds = delete_after.total_seconds()
-            if delete_after.total_seconds() < 1:
-                return await ctx.send(_("`delete_after` must be greater than 1 second."))
-
         if ctx.guild.id not in self.triggers:
             self.triggers[ctx.guild.id] = Trigger(
                 author,
-                created_at=ctx.message.id,
-                delete_after=delete_after_seconds,
+                created_at=ctx.message.id
             )
 
         trigger_list = await self.config.guild(guild).trigger_list()
@@ -133,14 +122,15 @@ class PictureSauce(SauceHandler, commands.Cog):
         await ctx.send(_("Trigger `{name}` set.").format(name=name))
 
         if len(channel_user_role) < 1:
-            return await ctx.send("You must supply 1 or more channels users or roles to be allowed")
+            await ctx.send("You must supply 1 or more channels users or roles to be allowed")
+            return
         for obj in channel_user_role:
             if obj.id not in trigger.whitelist:
                 async with self.config.guild(ctx.guild).trigger_list() as trigger_list:
                     trigger.whitelist.append(obj.id)
                     trigger_list[trigger.name] = await trigger.to_json()
         await self.remove_trigger_from_cache(ctx.guild.id, trigger)
-        
+
         await ctx.send("This command is: sauce set")
 
     @sauce.command()
@@ -166,4 +156,6 @@ class PictureSauce(SauceHandler, commands.Cog):
         """This does stuff!"""
         # Your code will go here
         await ctx.send("This command is: sauce set all")
+
+        # "(?:^|\s|\W)(?:loli|(?:one)?shota|child)"
 
