@@ -48,33 +48,14 @@ class SauceHandler:
         self.triggers: Dict[int, Trigger]
         self.trigger_timeout: int
 
-    async def check_bw_list(self, trigger: Trigger, message: discord.Message):
-        author: discord.Member = cast(discord.Member, message.author)
+    async def check_set_list(self, trigger: Trigger, message: discord.Message):
+        # author: discord.Member = cast(discord.Member, message.author)
         channel: discord.TextChannel = cast(discord.TextChannel, message.channel)
-        if trigger.blacklist:
-            if channel.id in trigger.blacklist:
-                return False
-            if channel.category_id in trigger.blacklist:
-                return False
-            if message.author.id in trigger.blacklist:
-                return False
-            for role in author.roles:
-                if role.is_default():
-                    continue
-                if role.id in trigger.blacklist:
-                    return False
-        elif trigger.whitelist:
-            if channel.id in trigger.whitelist:
+        if trigger.setlist:
+            if channel.id in trigger.setlist:
                 return True
-            if channel.category_id in trigger.whitelist:
+            if channel.category_id in trigger.setlist:
                 return True
-            if message.author.id in trigger.whitelist:
-                return True
-            for role in author.roles:
-                if role.is_default():
-                    continue
-                if role.id in trigger.whitelist:
-                    return True
         else:
             return None
 
